@@ -1,0 +1,19 @@
+[user]
+        name = Mukesh Munisubbanna
+        email = mukeshgowda.m@gmail.com
+        signingKey = 5F80B5790C41DC3D
+
+[push]
+        default = current
+
+[core]
+        editor = nano
+
+[color]
+        ui = true
+
+[diff]
+        tool = meld
+
+[commit]
+        gpgsign = true

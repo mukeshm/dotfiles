@@ -1,7 +1,6 @@
 [user]
         name = Mukesh Munisubbanna
-        email = mukeshgowda.m@gmail.com
-        signingKey = 5F80B5790C41DC3D
+        email = me@mukeshm.com
 
 [push]
         default = current
@@ -14,6 +13,3 @@
 
 [diff]
         tool = meld
-
-[commit]
-        gpgsign = true

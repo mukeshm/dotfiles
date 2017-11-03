@@ -18,4 +18,5 @@ alias batman=pacman
 alias nohup="nohup "
 alias ll='ls -ltrh'
 alias lla='ll -a'
-alias woman=man
+alias woman='man '
+alias rmrf='rm -rfv'

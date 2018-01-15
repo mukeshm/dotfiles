@@ -8,9 +8,6 @@
 ;; Define package repositories
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/") t)
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -27,9 +24,7 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar myPackages
-  '(better-defaults
-    magit
-    material-theme))
+  '())
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
@@ -39,20 +34,18 @@
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
 
-(setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'material t) ;; load material theme
-(global-linum-mode t) ;; enable line numbers globally
-
+;; hide the startup message
+(setq inhibit-startup-message t)
+;; enable line numbers globally
+(global-linum-mode 1)
+;; disable the menu bar
+(menu-bar-mode -1)
+;; disable the toolbar
+(tool-bar-mode -1)
+;; disable the scrollbar
+(scroll-bar-mode -1)
+;; highlight matching pairs of parentheses and other characters
+(show-paren-mode 1)
+;; insert matching delimiters
+(electric-pair-mode 1)
 ;; init.el ends here 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (material-theme magit better-defaults))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

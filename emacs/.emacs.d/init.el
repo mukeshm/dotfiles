@@ -3,6 +3,8 @@
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
 
+;; put emacs in fullscreen
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 ;; hide the startup message
 (setq inhibit-startup-message t)
 
@@ -13,10 +15,8 @@
 
 ;; highlight matching pairs of parentheses and other characters
 (show-paren-mode 1)
-
 ;; enable line numbers globally
 (global-linum-mode 1)
-
 ;; insert matching delimiters
 (electric-pair-mode 1)
 
@@ -28,6 +28,5 @@
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
 
-
-;; init.el ends here 
+;; init.el ends here
 

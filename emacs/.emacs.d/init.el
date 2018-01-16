@@ -22,6 +22,12 @@
 ;; line highlighting
 (global-hl-line-mode 1)
 
+;; cursor type
+(setq-default cursor-type '(bar . 2))
+;; use spaces instead of tabs
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2)
+
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name
@@ -31,4 +37,3 @@
 (setq vc-make-backup-files t)
 
 ;; init.el ends here
-

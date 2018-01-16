@@ -19,6 +19,8 @@
 (global-linum-mode 1)
 ;; insert matching delimiters
 (electric-pair-mode 1)
+;; line highlighting
+(global-hl-line-mode 1)
 
 ;; Write backup files to own directory
 (setq backup-directory-alist

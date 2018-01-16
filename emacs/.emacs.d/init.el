@@ -8,7 +8,7 @@
 ;; hide the startup message
 (setq inhibit-startup-message t)
 
-;; disable the menu-bar, tool-bar and scroll-bar 
+;; disable the menu-bar, tool-bar and scroll-bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -27,6 +27,8 @@
 ;; use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 (setq tab-width 2)
+;; remove trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Write backup files to own directory
 (setq backup-directory-alist

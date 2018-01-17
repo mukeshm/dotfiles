@@ -21,12 +21,14 @@
 (electric-pair-mode 1)
 ;; line highlighting
 (global-hl-line-mode 1)
+;; word wrap is ugly
+(global-visual-line-mode 1)
 
 ;; cursor type
 (setq-default cursor-type '(bar . 2))
 ;; use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
-(setq tab-width 2)
+(setq-default tab-width 2)
 ;; remove trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -37,5 +39,14 @@
 
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
+
+;; EXPERIMENTAL
+;; -----------------------------------
+
+;; auto revert if file changed externally
+;; (global-auto-revert-mode 1)
+(add-to-list 'load-path "~/.emacs.d/libs/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'solarized-dark t)
 
 ;; init.el ends here
